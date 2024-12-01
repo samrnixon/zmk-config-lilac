@@ -1,0 +1,17 @@
+if SHIELD_LILAC_LEFT
+
+# Name must be less than 16 characters long!
+config ZMK_KEYBOARD_NAME
+    default "Lilac Ergo"
+
+config ZMK_SPLIT_ROLE_CENTRAL
+    default y
+
+endif
+
+if SHIELD_LILAC_LEFT || SHIELD_LILAC_RIGHT
+
+config ZMK_SPLIT
+    default y
+
+endif
