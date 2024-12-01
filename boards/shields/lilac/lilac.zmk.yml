@@ -3,7 +3,7 @@ id: lilac
 name: Lilac
 type: shield
 url: https://github.com/samrnixon/zmk-config-lilac
-requires: [pro_micro]
+requires: [nice_nano_v2]
 exposes: [i2c_oled]
 features:
   - keys
