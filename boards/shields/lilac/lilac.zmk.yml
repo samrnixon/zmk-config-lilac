@@ -9,6 +9,7 @@ features:
   - keys
   - display
   - encoder
+  - studio
 siblings:
   - lilac_left
   - lilac_right
