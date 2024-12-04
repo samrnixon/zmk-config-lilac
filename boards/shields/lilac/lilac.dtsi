@@ -1,13 +1,11 @@
 #include <dt-bindings/zmk/matrix_transform.h>
 #include "lilac-layouts.dtsi"
 
-&arduino_i2c {
-    status = "okay";
-};
-
-nice_view_spi: &arduino_spi {
-    status = "okay";
-    cs-gpios = <&arduino_header 1 GPIO_ACTIVE_HIGH>;
+&nice_nano_spi {
+    compatible = "nordic,nrf-spim";
+    mosi-pin = <19>;
+    sck-pin = <20>;
+    cs-gpios = <&gpio0 1 GPIO_ACTIVE_LOW>; 
 };
 
 / {

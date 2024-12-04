@@ -14,3 +14,7 @@
 &left_encoder {
     status = "okay";
 };
+
+&nice_nano_spi {
+    status = "okay";
+};
