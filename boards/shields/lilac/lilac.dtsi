@@ -1,8 +1,7 @@
 #include <dt-bindings/zmk/matrix_transform.h>
 #include "lilac-layouts.dtsi"
 
-&nice_nano_spi {
-    compatible = "nordic,nrf-spim";
+nice_nano_spi {
     mosi-pin = <19>;
     sck-pin = <20>;
     cs-gpios = <&gpio0 1 GPIO_ACTIVE_LOW>; 
