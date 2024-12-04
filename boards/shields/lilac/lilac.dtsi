@@ -38,11 +38,11 @@
 
     };
 
-    nice_view_spi: nice_view_spi {
+    nice_view_spi: &spi0 {
         cs-gpios = <&pro_micro 1 GPIO_ACTIVE_HIGH>;
         mosi-gpios = <&pro_micro 19 GPIO_ACTIVE_HIGH>;
         sck-gpios = <&pro_micro 20 GPIO_ACTIVE_HIGH>;
-    }
+    };
 
     left_encoder: encoder_left {
         compatible = "alps,ec11";

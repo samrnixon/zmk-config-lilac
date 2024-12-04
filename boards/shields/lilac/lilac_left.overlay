@@ -11,10 +11,6 @@
         ;
 };
 
-&nice_view_spi {
-    status = "okay";
-}
-
 &left_encoder {
     status = "okay";
 };
