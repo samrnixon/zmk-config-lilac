@@ -1,8 +1,0 @@
-#include <dt-bindings/zmk/matrix_transform.h>
-#include "lilac-layouts.dtsi"
-
-/ {
-    chosen {
-        zmk,physical-layout = &physical_layout0;
-    };
-};
