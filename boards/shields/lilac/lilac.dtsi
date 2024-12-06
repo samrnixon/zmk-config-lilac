@@ -6,7 +6,6 @@
         zmk,kscan = &kscan0;
         zmk,physical-layout = &physical_layout0;
         zmk,keymap_transform = &default_transform;
-        zephyr,display = &nice_view;
     };
 
     default_transform: keymap_transform0 {
@@ -82,12 +81,4 @@ nice_view_spi: &spi0 {
     pinctrl-1 = <&spi0_sleep>;
     pinctrl-names = "default", "sleep";
     cs-gpios = <&gpio1 1 GPIO_ACTIVE_HIGH>;
-
-    nice_view: ls0xx@0 {
-        compatible = "sharp,ls0xx";
-        spi-max-frequency = <1000000>;
-        reg = <0>;
-        width = <160>;
-        height = <68>;
-    };
 };
