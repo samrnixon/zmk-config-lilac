@@ -14,12 +14,3 @@
 &left_encoder {
     status = "okay";
 };
-
-nice_view_spi: &spi0 {
-    compatible = "nordic,nrf-spim";
-    status = "okay";
-    pinctrl-0 = <&spi0_default>;
-    pinctrl-1 = <&spi0_sleep>;
-    pinctrl-names = "default", "sleep";
-    cs-gpios = <&gpio0 6 GPIO_ACTIVE_HIGH>;
-};
