@@ -9,6 +9,10 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/ext_power.h>
 
+#define BASE 0
+#define NUM  1
+#define CODE  2
+
 / {
         keymap {
                 compatible = "zmk,keymap";
@@ -16,14 +20,50 @@
                 default_layer {
 // -----------------------------------------------------------------------------------------
 // |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BSPC |
-// | CAPS |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
-// | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | SHIFT|
-//              |MUTE | LALT| WIN |SPACE|   |SPACE| WIN  | RALT| MUTE|
+// | CAPS |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  | ENTER|
+// | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  B  |  N  |  M   |  ,  |  .  | SHIFT|
+//              |MUTE |LCTRL| WIN |SPACE|   |layerA| codeLayer  | RALT| MUTE|
+
                         bindings = <
    &kp TAB   &kp Q &kp W &kp E &kp R &kp T              &kp Y &kp U  &kp I &kp O  &kp P    &kp BSPC
-   &kp CLCK &kp A &kp S &kp D &kp F &kp G               &kp H &kp J  &kp K  &kp L  &kp SEMI &kp SQT
-   &kp LSHFT &kp Z &kp X &kp C &kp V &kp B              &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp RSHFT
-        &kp C_MUTE &kp LALT &kp LWIN &kp SPACE          &kp SPACE &kp LWIN &kp RALT &kp C_MUTE
+   &kp CLCK &kp A &kp S &kp D &kp F &kp G               &kp H &kp J  &kp K  &kp L  &kp SEMI &kp ENTER
+   &kp LSHFT &kp Z &kp X &kp C &kp V &kp B              &kp B &kp N &kp M  &kp COMMA &kp DOT &kp RSHFT
+        &kp C_MUTE &kp LCTRL &kp LWIN &kp SPACE          &mo numLayer &mo codeLayer &kp RALT &kp C_MUTE
+                        >;
+
+                        sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;
+                };
+
+                num_layer {
+                        label = "numLayer";
+// -----------------------------------------------------------------------------------------
+// |  Esc |    ! |   @    |  #     |    $   |   %    |          |  ^    |   &   |   *     |   -   |   +    |      |
+// |     |   1   |   2    |    3   |     4  |   5    |          |   DEL |       |   UP    |      |       | Enter|
+// |     |   6   |   7    |    8   |   9    |   0    |          |       |  LEFT |   DOWN  |RIGHT |       |      |
+// |  X  |   X   |        |        |        |        |          |       |       |         |     |   X   |   X   |
+
+                        bindings = <
+&kp Esc   &kp EXCL   &kp AT   &kp HASH   &kp DLLR   &kp PRCNT   &kp CARET   &kp AMPS &kp STAR   &kp MINUS   &kp PLUS   &trans  
+&trans   &kp N1   &kp N2   &kp N3   &kp N4   &kp N5             &kp DEL   &trans   &kp UP   &trans   &trans   &kp ENTER   
+&trans   &kp N6   &kp N7   &kp N8   &kp N9   &kp N0             &trans   &kp LEFT   &kp DOWN   &kp RIGHT   &trans   &trans   
+                &trans   &trans   &trans   &trans               &trans   &trans   &trans   &trans   
+                        >;
+
+                        sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;
+                };
+
+                code_layer {
+                        label = "codeLayer";
+// -----------------------------------------------------------------------------------------
+// |    |       |       |       |       |       |               |       |    (   |   )    |       |       |     
+// |    |       |       |       |       |       |               |       |    {   |   }    |   \    |   "|"    |   '  |
+// |    |       |       |       |       |       |               |       |   [    |   ]    |   /   |    EQL   |     |
+// |  X |   X   |       |       |       |       |               |       |        |        |       |  X    |  X  |
+                        bindings = <
+&trans   &trans   &trans   &trans   &trans   &trans                &trans   &kp LPAR &kp RPAR   &trans   &trans   &trans   
+&trans   &trans   &trans   &trans   &trans   &trans                &trans   &kp LBRC   &kp RBRC   &kp BSLH   &kp PIPE   &trans   
+&trans   &trans   &trans   &trans   &trans   &trans                &trans   &kp LBKT &kp RBKT   &kp FSLH   &kp EQUAL   &trans   
+                  &trans   &trans   &trans   &trans                &trans   &trans   &trans   &trans   
                         >;
 
                         sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;
