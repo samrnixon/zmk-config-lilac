@@ -37,15 +37,15 @@
                 num_layer {
                         label = "numLayer";
 // -----------------------------------------------------------------------------------------
-// |  Esc |    ! |   @    |  #     |    $   |   %    |          |  ^    |   &   |   UP   |   -   |   +  |  *  |
-// |     |   1   |   2    |    3   |     4  |   5    |          |   DEL |  LEFT |   DOWN    | RIGHT |   "   |   '  |
-// |     |   6   |   7    |    8   |   9    |   0    |          |       |      |        |     |       |  ?   |
-// |  X  |   X   |        |     |        |        |          |       |       |         |     |   X   |   X   |
+// |  Esc |    ! |   @    |  #     |    $   |   %    |          |  ^    |   &   |   UP   |   -   |   +   |  *   |
+// |     |   1   |   2    |    3   |     4  |   5    |          |   DEL |  LEFT |   DOWN | RIGHT |   "   |   '  |
+// |     |   6   |   7    |    8   |   9    |   0    |          |       |       |        |       |       |  ?   |
+// |  X  |   X   |        |        |        |        |          |       |       |        |       |   X   |   X  |
 
                         bindings = <
 &kp ESC   &kp EXCL   &kp AT   &kp HASH   &kp DLLR   &kp PRCNT           &kp CARET   &kp AMPS &kp UP   &kp MINUS   &kp EQUAL   &kp STAR  
 &none   &kp N1   &kp N2   &kp N3   &kp N4   &kp N5               &kp DEL   &kp LEFT   &kp DOWN   &kp RIGHT   &kp DQT  &kp SQT   
-&none   &kp N6   &kp N7   &kp N8   &kp N9   &kp N0               &none  &none   &none    &none     &none   &kp QMARK   
+&trans   &kp N6   &kp N7   &kp N8   &kp N9   &kp N0               &none  &none   &none    &none     &none   &kp QMARK   
                 &none   &none   &none   &none                   &none   &none   &none   &none   
                         >;
 
@@ -55,15 +55,15 @@
                 code_layer {
                         label = "codeLayer";
 // -----------------------------------------------------------------------------------------
-// |BT1  |  BT2  |  BT3 |       |       |       |               |       |    (   |   )    |       |     |     
-// |  studio  |       |       |       |       |       |               |       |    {   |   }    |   \    |   "|"    |   '  |
-// | BT Clr   |       |       |       |       |       |               |       |   [    |   ]    |   /   |       |     |
-// |  X |   X   |       |       |       |       |               |       |        |        |       |  X    |  X  |
+// |BT1  |  BT2  |  BT3 |       |       |   BT Clr  |           |       |    (   |   )    |       |          |      |    
+// |  studio  |       |       |       |       |       |         |       |    {   |   }    |   \   |   "|"    |   '  |
+// |    |       |       |       |       |       |               |       |   [    |   ]    |   /   |          |      |
+// |  X |   X   |       |       |       |       |               |       |        |        |       |  X       |  X   |
                         bindings = <
-&bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 3   &none   &none   &none                &none   &kp LPAR &kp RPAR   &none   &none   &none   
-&studio_unlock   &none   &none   &none   &none   &none                &none   &kp LBRC   &kp RBRC   &kp BSLH   &kp PIPE   &kp SQT   
- &bt BT_CLR   &none   &none   &none   &none   &none                &none   &kp LBKT &kp RBKT   &kp FSLH   &kp EQUAL   &none   
-                  &none   &none   &none   &none                &none   &none   &none   &none   
+&bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 3   &none   &none    &bt BT_CLR        &none   &kp LPAR &kp RPAR   &none   &none   &none   
+&studio_unlock   &none   &none   &none   &none   &none                          &none   &kp LBRC   &kp RBRC   &kp BSLH   &kp PIPE   &kp SQT   
+ &trans   &none   &none   &none   &none   &none                                 &none   &kp LBKT &kp RBKT   &kp FSLH   &kp EQUAL   &none   
+                  &none   &none   &none   &none                                 &none   &none   &none   &none   
                         >;
 
                         sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;
