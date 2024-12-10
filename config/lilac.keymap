@@ -22,7 +22,7 @@
 // |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BSPC |
 // | CAPS |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  | ENTER|
 // | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  B  |  N  |  M   |  ,  |  .  | SHIFT|
-//              |MUTE |LCTRL| WIN |SPACE|   |layerA| codeLayer  | RALT| Play pause|
+//              |MUTE |LCTRL| WIN |SPACE|   |numLayer| codeLayer  | RALT| Play pause|
 
                         bindings = <
    &kp TAB   &kp Q &kp W &kp E &kp R &kp T              &kp Y &kp U  &kp I &kp O  &kp P    &kp BSPC
@@ -57,7 +57,7 @@
 // -----------------------------------------------------------------------------------------
 // |BT1  |  BT2  |  BT3 |       |       |   BT Clr  |           |       |    (   |   )    |       |          |      |    
 // |  studio  |       |       |       |       |       |         |       |    {   |   }    |   \   |   "|"    |   '  |
-// |    |       |       |       |       |       |               |       |   [    |   ]    |   /   |          |      |
+// |    |       |       |       |       |       |               |       |    [   |   ]    |   /   |          |      |
 // |  X |   X   |       |       |       |       |               |       |        |        |       |  X       |  X   |
                         bindings = <
 &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 3   &none   &none    &bt BT_CLR        &none   &kp LPAR &kp RPAR   &none   &none   &none   
