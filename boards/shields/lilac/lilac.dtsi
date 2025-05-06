@@ -5,7 +5,6 @@
     chosen {
         zmk,kscan = &kscan0;
         zmk,physical-layout = &physical_layout0;
-        zmk,keymap_transform = &default_transform;
     };
 
     default_transform: keymap_transform0 {

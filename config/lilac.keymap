@@ -20,15 +20,15 @@
                 default_layer {
 // -----------------------------------------------------------------------------------------
 // |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BSPC |
-// | CAPS |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  | ENTER|
+// | CAPS |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  | "    |
 // | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  B  |  N  |  M   |  ,  |  .  | SHIFT|
-//              |MUTE |LCTRL| WIN |SPACE|   |numLayer| codeLayer  | RALT| Play pause|
+//              |MUTE | WIN | LCTRL|SPACE| |numLayer| RALT | codeLayer| Play pause|
 
                         bindings = <
    &kp TAB   &kp Q &kp W &kp E &kp R &kp T              &kp Y &kp U  &kp I &kp O  &kp P    &kp BSPC
-   &kp CLCK &kp A &kp S &kp D &kp F &kp G               &kp H &kp J  &kp K  &kp L  &kp SEMI &kp ENTER
+   &kp CLCK &kp A &kp S &kp D &kp F &kp G               &kp H &kp J  &kp K  &kp L  &kp SEMI &kp SINGLE_QUOTE
    &kp LSHFT &kp Z &kp X &kp C &kp V &kp B              &kp B &kp N &kp M  &kp COMMA &kp DOT &kp RSHFT
-   &kp C_MUTE &kp LCTRL &kp LWIN &kp SPACE              &mo numLayer &mo codeLayer &kp RALT &kp C_PP
+   &kp C_MUTE  &kp LWIN &kp LCTRL &kp SPACE              &mo numLayer &kp RALT &mo codeLayer &kp C_PP
                         >;
 
                         sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;
@@ -38,14 +38,14 @@
                         label = "numLayer";
 // -----------------------------------------------------------------------------------------
 // |  Esc |    ! |   @    |  #     |    $   |   %    |          |  ^    |   &   |   UP   |   -   |   +   |  *   |
-// |     |   1   |   2    |    3   |     4  |   5    |          |   DEL |  LEFT |   DOWN | RIGHT |   "   |   '  |
-// |     |   6   |   7    |    8   |   9    |   0    |          |       |       |        |       |       |  ?   |
+// |     |   1   |   2    |    3   |     4  |   5    |          |   DEL |  LEFT |   DOWN | RIGHT |       | ENTER|
+// |     |   6   |   7    |    8   |   9    |   0    |          |       |       |        |   <   |   >   |  ?   |
 // |  X  |   X   |        |        |        |        |          |       |       |        |       |   X   |   X  |
 
                         bindings = <
 &kp ESC   &kp EXCL   &kp AT   &kp HASH   &kp DLLR   &kp PRCNT           &kp CARET   &kp AMPS &kp UP   &kp MINUS   &kp EQUAL   &kp STAR  
-&none   &kp N1   &kp N2   &kp N3   &kp N4   &kp N5               &kp DEL   &kp LEFT   &kp DOWN   &kp RIGHT   &kp DQT  &kp SQT   
-&trans   &kp N6   &kp N7   &kp N8   &kp N9   &kp N0               &none  &none   &none    &none     &none   &kp QMARK   
+&none   &kp N1   &kp N2   &kp N3   &kp N4   &kp N5               &kp DEL   &kp LEFT   &kp DOWN   &kp RIGHT   &none  &kp ENTER   
+&trans   &kp N6   &kp N7   &kp N8   &kp N9   &kp N0               &none  &none   &none    &kp LESS_THAN  &kp GREATER_THAN &kp SLASH   
                 &none   &none   &none   &none                   &none   &none   &none   &none   
                         >;
 
